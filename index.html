@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ChangeLot – User Profiles</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>ChangeLot</h1>
+    <p class="subtitle">User Profiles</p>
+  </header>
+
+  <main>
+    <section class="profiles" id="profiles">
+      <!-- Profile cards are injected by profiles.js -->
+    </section>
+  </main>
+
+  <!-- Profile-picture update modal -->
+  <div class="modal-overlay hidden" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal">
+      <h2 id="modalTitle">Update Profile Picture</h2>
+      <p id="modalUsername"></p>
+
+      <div class="avatar-preview">
+        <img id="modalPreview" src="" alt="Preview" />
+      </div>
+
+      <label class="file-label" for="fileInput">
+        Choose an image
+        <input type="file" id="fileInput" accept="image/*" />
+      </label>
+
+      <div class="modal-actions">
+        <button id="saveBtn">Save</button>
+        <button id="cancelBtn" class="secondary">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="profiles.js"></script>
+</body>
+</html>
